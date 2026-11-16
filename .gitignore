@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.tess-cache/
+*.traineddata
+app/public/tesseract/
+data/raw/indian_medicine_data.csv
+eval/bills/*/ocr-psm*/
+__pycache__/
+.DS_Store
+eval/bills/*/*.png
+data/processed/match_pairs.jsonl
+tests/out/

@@ -1,0 +1,42 @@
+{
+ "nppa": {
+  "sources": [
+   {
+    "file": "nppa_nlem2022_767_wpi_2026.pdf",
+    "list": "NLEM 2022",
+    "url": "https://nppa.gov.in/storage/uploads/tender/0fd8be342c35d5a46a13b281cadc5e4f.pdf",
+    "title": "Notification for revision in ceiling prices of 767 scheduled formulations under NLEM 2022 based on WPI",
+    "listed_on": "https://nppa.gov.in/en/view_more?id=4 (27-Mar-2026)",
+    "so_number": "S.O. 1575(E)",
+    "sha256": "8c974127f5518cf2a31eb1a7ea69fefa4fbb161ea3a58823e9a5d2587bf7897c"
+   },
+   {
+    "file": "nppa_nlem2015_138_wpi_2026.pdf",
+    "list": "NLEM 2015",
+    "url": "https://nppa.gov.in/storage/uploads/tender/0d883ca9b600c8a13cec452376176fc4.pdf",
+    "title": "Notification for revision in ceiling prices of 138 scheduled formulations under NLEM 2015 based on WPI",
+    "listed_on": "https://nppa.gov.in/en/view_more?id=4 (27-Mar-2026)",
+    "so_number": "S.O. 1581(E)",
+    "sha256": "5447f882902216c4ea63d23916a70f3ecd71c1466d83369c0f7dee3dc6c81a4d"
+   }
+  ],
+  "effective_from": "2026-04-01",
+  "gst_rule": "Ceiling prices are exclusive of GST. Notes (d) and (f) of S.O. 1575(E): sale price may not exceed ceiling price plus GST as applicable, and GST may be added only if actually paid or payable.",
+  "rows": 840,
+  "skipped": 55
+ },
+ "pmbjp": {
+  "source": "https://janaushadhi.gov.in/product-portfolio/product-mrp-list",
+  "fetched_at": "2026-11-16T13:45:33+00:00",
+  "reported_total": 2453,
+  "rows_with_mrp_and_parsed": 1715,
+  "unparsed": 385
+ },
+ "brands": {
+  "source": "https://github.com/junioralive/Indian-Medicine-Dataset (DATA/indian_medicine_data.csv)",
+  "licence": "MIT, Copyright (c) 2024 JuniorAlive",
+  "rows": 243893,
+  "compositions": 10166,
+  "sha256": "c9de0182474f652b7790a85bf534d0df9bd814575fcbda7109696d0fb3bec042"
+ }
+}
