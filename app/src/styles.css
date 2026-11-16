@@ -102,7 +102,7 @@ button { font: inherit; color: inherit; }
 .fig.save .big { color: var(--teal); }
 .honest { font-size: 14px; color: var(--ink-2); margin: 16px 0 0; }
 .share-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-.lines h2, .todo h2 { font-family: var(--serif); font-weight: 500; font-size: 24px; margin: 6px 0 12px; }
+.lines h2, .next-steps h2 { font-family: var(--serif); font-weight: 500; font-size: 24px; margin: 6px 0 12px; }
 .line { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; margin-bottom: 14px; }
 .line.flagged { border-color: var(--rust); box-shadow: inset 4px 0 0 var(--rust); }
 .line-h { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
@@ -144,8 +144,8 @@ input[type=radio] { width: auto; min-height: 0; }
 .alt { text-align: left; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; cursor: pointer; }
 .alt small { display: block; color: var(--ink-2); }
 .add { display: grid; grid-template-columns: 2fr 1fr 1fr auto; gap: 10px; align-items: end; background: var(--card); border: 1px dashed #b9b2a3; border-radius: var(--radius); padding: 14px; }
-.todo ol { padding-left: 22px; margin: 0; }
-.todo li { margin-bottom: 10px; }
+.next-steps ol { padding-left: 22px; margin: 0; }
+.next-steps li { margin-bottom: 10px; }
 .about { max-width: 720px; }
 .about h1 { font-family: var(--serif); font-weight: 500; font-size: 34px; }
 .about h2 { font-family: var(--serif); font-weight: 500; font-size: 22px; margin-top: 28px; }

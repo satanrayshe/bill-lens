@@ -332,7 +332,7 @@ function resultView() {
         </form>
         <p class="note">${esc(t("switchNote"))}</p>
       </section>
-      <section class="todo">
+      <section class="next-steps">
         <h2>${esc(t("whatNow"))}</h2>
         <ol>
           ${anyFlag ? `<li>${esc(t("act_keep"))}</li><li>${esc(t("act_ask"))}</li><li>${esc(t("act_complain"))} <a href="https://nppa.gov.in/en/pharma_sahi_daam" target="_blank" rel="noopener">${esc(t("openSahiDaam"))}</a></li><li>${esc(t("act_helpline"))} <a href="tel:1800111255">1800 111 255</a></li>` : ""}
