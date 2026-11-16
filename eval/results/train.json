@@ -1,0 +1,310 @@
+{
+ "results": [
+  {
+   "split": "all",
+   "bills": 60,
+   "gt_lines": 346,
+   "line_extraction_recall": 97.10982658959537,
+   "line_extraction_precision": 97.3913043478261,
+   "medicine_match_acc_salt_strength_form": 96.72619047619048,
+   "medicine_match_acc_brand_exact": 95.83333333333333,
+   "ceiling_lookup_recall": 95.04950495049505,
+   "overcharge_lines": 47,
+   "overcharge_precision": 97.67441860465117,
+   "overcharge_recall": 89.36170212765957,
+   "tp": 42,
+   "fp": 1,
+   "fn": 5,
+   "bill_level_precision": 100,
+   "bill_level_recall": 91.17647058823529,
+   "lines_with_generic_pct": 81.8452380952381,
+   "avg_ocr_ms": 1209.1833333333334
+  },
+  {
+   "split": "thermal",
+   "bills": 15,
+   "gt_lines": 84,
+   "line_extraction_recall": 94.04761904761905,
+   "line_extraction_precision": 95.18072289156626,
+   "medicine_match_acc_salt_strength_form": 93.67088607594937,
+   "medicine_match_acc_brand_exact": 92.40506329113924,
+   "ceiling_lookup_recall": 90.9090909090909,
+   "overcharge_lines": 7,
+   "overcharge_precision": 100,
+   "overcharge_recall": 85.71428571428571,
+   "tp": 6,
+   "fp": 0,
+   "fn": 1,
+   "bill_level_precision": 100,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 84.81012658227849,
+   "avg_ocr_ms": 1541.4
+  },
+  {
+   "split": "gst",
+   "bills": 15,
+   "gt_lines": 85,
+   "line_extraction_recall": 98.82352941176471,
+   "line_extraction_precision": 98.82352941176471,
+   "medicine_match_acc_salt_strength_form": 97.61904761904762,
+   "medicine_match_acc_brand_exact": 97.61904761904762,
+   "ceiling_lookup_recall": 100,
+   "overcharge_lines": 15,
+   "overcharge_precision": 100,
+   "overcharge_recall": 100,
+   "tp": 15,
+   "fp": 0,
+   "fn": 0,
+   "bill_level_precision": 100,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 83.33333333333333,
+   "avg_ocr_ms": 1197.1333333333334
+  },
+  {
+   "split": "chemist",
+   "bills": 15,
+   "gt_lines": 83,
+   "line_extraction_recall": 98.79518072289157,
+   "line_extraction_precision": 98.79518072289157,
+   "medicine_match_acc_salt_strength_form": 100,
+   "medicine_match_acc_brand_exact": 98.78048780487805,
+   "ceiling_lookup_recall": 100,
+   "overcharge_lines": 13,
+   "overcharge_precision": 91.66666666666667,
+   "overcharge_recall": 84.61538461538461,
+   "tp": 11,
+   "fp": 1,
+   "fn": 2,
+   "bill_level_precision": 100,
+   "bill_level_recall": 90.9090909090909,
+   "lines_with_generic_pct": 79.26829268292683,
+   "avg_ocr_ms": 1090.7333333333333
+  },
+  {
+   "split": "hospital",
+   "bills": 15,
+   "gt_lines": 94,
+   "line_extraction_recall": 96.80851063829788,
+   "line_extraction_precision": 96.80851063829788,
+   "medicine_match_acc_salt_strength_form": 95.6043956043956,
+   "medicine_match_acc_brand_exact": 94.50549450549451,
+   "ceiling_lookup_recall": 90.1639344262295,
+   "overcharge_lines": 12,
+   "overcharge_precision": 100,
+   "overcharge_recall": 83.33333333333333,
+   "tp": 10,
+   "fp": 0,
+   "fn": 2,
+   "bill_level_precision": 100,
+   "bill_level_recall": 77.77777777777777,
+   "lines_with_generic_pct": 80.21978021978022,
+   "avg_ocr_ms": 1007.4666666666667
+  }
+ ],
+ "errors": [
+  {
+   "bill": "train-000",
+   "kind": "match",
+   "ocr": "CEFAKIND 560 TAB",
+   "got": "Cefakind 125mg | cefuroxime 125mg",
+   "want": "Cefakind 500 | cefuroxime 500mg"
+  },
+  {
+   "bill": "train-000",
+   "kind": "missed",
+   "want": "Ocid 20 q=60 a=266.4"
+  },
+  {
+   "bill": "train-000",
+   "kind": "missed-flag",
+   "name": "Ocid 20",
+   "got": null
+  },
+  {
+   "bill": "train-012",
+   "kind": "missed",
+   "want": "Rosuvas 10 q=30 a=213"
+  },
+  {
+   "bill": "train-012",
+   "kind": "missed",
+   "want": "Amlopres 5 q=30 a=48.3"
+  },
+  {
+   "bill": "train-012",
+   "kind": "match",
+   "ocr": "Sioears K:0s/28",
+   "got": "Siotears | carboxymethylcellulose 0.1%",
+   "want": "Losar 50 | losartan 50mg"
+  },
+  {
+   "bill": "train-016",
+   "kind": "match",
+   "ocr": "RISPERIDONE",
+   "got": "Risdone | risperidone 1mg/ml",
+   "want": "StayHappi Risperidone 1mg | risperidone 1mg"
+  },
+  {
+   "bill": "train-022",
+   "kind": "missed",
+   "want": "Azimont-L q=1 a=278.47"
+  },
+  {
+   "bill": "train-022",
+   "kind": "missed-flag",
+   "name": "Azimont-L",
+   "got": null
+  },
+  {
+   "bill": "train-022",
+   "kind": "flag-on-unaligned",
+   "name": "Azimont-L Tab"
+  },
+  {
+   "bill": "train-023",
+   "kind": "match",
+   "ocr": "TAB",
+   "got": null,
+   "want": "Lipvas 10 | atorvastatin 10mg"
+  },
+  {
+   "bill": "train-023",
+   "kind": "missed-flag",
+   "name": "Lipvas 10",
+   "got": {
+    "flags": [],
+    "overcharge": 0,
+    "savings": 0,
+    "status": "unmatched"
+   }
+  },
+  {
+   "bill": "train-023",
+   "kind": "match",
+   "ocr": "500MG/250MG TAB",
+   "got": null,
+   "want": "Amic T 500mg/250mg | mefenamic acid 250mg + tranexamic acid 500mg"
+  },
+  {
+   "bill": "train-023",
+   "kind": "match",
+   "ocr": "625TAB",
+   "got": "Febtab | febuxostat 40mg",
+   "want": "Clavam 625 | amoxicillin 500mg + clavulanic acid 125mg"
+  },
+  {
+   "bill": "train-027",
+   "kind": "missed",
+   "want": "Sibelium 10mg q=90 a=407.7"
+  },
+  {
+   "bill": "train-028",
+   "kind": "missed",
+   "want": "Amlokind 5 q=15 a=37.65"
+  },
+  {
+   "bill": "train-028",
+   "kind": "missed",
+   "want": "Panfab DSR q=30 a=681.3"
+  },
+  {
+   "bill": "train-032",
+   "kind": "match",
+   "ocr": "CALPOL 656MG TAB",
+   "got": "Calpol 500mg | paracetamol 500mg",
+   "want": "Calpol 650mg | paracetamol 650mg"
+  },
+  {
+   "bill": "train-035",
+   "kind": "match",
+   "ocr": "TAB",
+   "got": null,
+   "want": "Zifi 200 | cefixime 200mg"
+  },
+  {
+   "bill": "train-042",
+   "kind": "missed-flag",
+   "name": "Zifi 200",
+   "got": {
+    "flags": [],
+    "overcharge": 0,
+    "savings": 28.86000000000001,
+    "pack": 10,
+    "units": 20,
+    "perUnit": 6.698,
+    "basis": "pack",
+    "basisWhy": "compared with printed MRP",
+    "gstRate": 0.05,
+    "gstAssumed": true,
+    "ceiling": {
+     "id": "22-147",
+     "list": "NLEM 2022",
+     "sl": 147,
+     "so": "S.O. 1575(E)",
+     "medicine": "Cefixime",
+     "dosage": "Tablet 200mg",
+     "unitText": "1 Tablet",
+     "ceiling": 10.01,
+     "limit": 10.5105
+    },
+    "mrpCheck": {
+     "mrp": 66.65,
+     "perPack": 66.98
+    },
+    "generic": {
+     "code": 55,
+     "name": "Cefixime Tablets IP 200 mg",
+     "unitSize": "10's",
+     "mrp": 52.55,
+     "perUnit": 5.255,
+     "unitName": "unit",
+     "savePct": 21.54374440131383
+    },
+    "confidence": "high",
+    "status": "ok"
+   }
+  },
+  {
+   "bill": "train-045",
+   "kind": "match",
+   "ocr": "AVIL2STAB",
+   "got": "Avil 50mg | pheniramine 50mg",
+   "want": "Avil 25 | pheniramine 25mg"
+  },
+  {
+   "bill": "train-048",
+   "kind": "match",
+   "ocr": "GLIZONE 36MG TAB",
+   "got": "Glizone 15mg | pioglitazone 15mg",
+   "want": "Glizone 30mg | pioglitazone 30mg"
+  },
+  {
+   "bill": "train-049",
+   "kind": "missed",
+   "want": "Shelcef-CV 200mg/125mg q=2 a=24.88"
+  },
+  {
+   "bill": "train-049",
+   "kind": "match",
+   "ocr": "AVIL2STAB",
+   "got": "Avilox | ciprofloxacin 125mg",
+   "want": "Avil 25 | pheniramine 25mg"
+  },
+  {
+   "bill": "train-059",
+   "kind": "missed",
+   "want": "Telma 40 q=60 a=252.6"
+  },
+  {
+   "bill": "train-059",
+   "kind": "missed",
+   "want": "Amlong q=30 a=126.3"
+  },
+  {
+   "bill": "train-059",
+   "kind": "missed-flag",
+   "name": "Amlong",
+   "got": null
+  }
+ ]
+}

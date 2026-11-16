@@ -1,0 +1,534 @@
+{
+ "results": [
+  {
+   "split": "all",
+   "bills": 80,
+   "gt_lines": 470,
+   "line_extraction_recall": 93.40425531914893,
+   "line_extraction_precision": 93.20594479830149,
+   "medicine_match_acc_salt_strength_form": 97.26651480637813,
+   "medicine_match_acc_brand_exact": 95.8997722095672,
+   "ceiling_lookup_recall": 92.03187250996017,
+   "overcharge_lines": 71,
+   "overcharge_precision": 88.57142857142857,
+   "overcharge_recall": 87.32394366197182,
+   "tp": 62,
+   "fp": 8,
+   "fn": 9,
+   "bill_level_precision": 95.65217391304348,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 87.01594533029613,
+   "avg_ocr_ms": 1114.5625
+  },
+  {
+   "split": "thermal",
+   "bills": 16,
+   "gt_lines": 102,
+   "line_extraction_recall": 92.15686274509804,
+   "line_extraction_precision": 91.2621359223301,
+   "medicine_match_acc_salt_strength_form": 94.68085106382979,
+   "medicine_match_acc_brand_exact": 91.48936170212765,
+   "ceiling_lookup_recall": 89.28571428571429,
+   "overcharge_lines": 6,
+   "overcharge_precision": 80,
+   "overcharge_recall": 66.66666666666667,
+   "tp": 4,
+   "fp": 1,
+   "fn": 2,
+   "bill_level_precision": 100,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 79.7872340425532,
+   "avg_ocr_ms": 1669.1875
+  },
+  {
+   "split": "gst",
+   "bills": 16,
+   "gt_lines": 92,
+   "line_extraction_recall": 97.82608695652173,
+   "line_extraction_precision": 97.82608695652173,
+   "medicine_match_acc_salt_strength_form": 98.88888888888889,
+   "medicine_match_acc_brand_exact": 98.88888888888889,
+   "ceiling_lookup_recall": 94.23076923076923,
+   "overcharge_lines": 20,
+   "overcharge_precision": 90.47619047619048,
+   "overcharge_recall": 95,
+   "tp": 19,
+   "fp": 2,
+   "fn": 1,
+   "bill_level_precision": 92.3076923076923,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 88.88888888888889,
+   "avg_ocr_ms": 1101.9375
+  },
+  {
+   "split": "chemist",
+   "bills": 16,
+   "gt_lines": 95,
+   "line_extraction_recall": 80,
+   "line_extraction_precision": 80,
+   "medicine_match_acc_salt_strength_form": 96.05263157894737,
+   "medicine_match_acc_brand_exact": 93.42105263157895,
+   "ceiling_lookup_recall": 76.74418604651163,
+   "overcharge_lines": 18,
+   "overcharge_precision": 73.6842105263158,
+   "overcharge_recall": 77.77777777777777,
+   "tp": 14,
+   "fp": 5,
+   "fn": 4,
+   "bill_level_precision": 90.9090909090909,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 86.84210526315789,
+   "avg_ocr_ms": 986.875
+  },
+  {
+   "split": "hospital",
+   "bills": 16,
+   "gt_lines": 85,
+   "line_extraction_recall": 100,
+   "line_extraction_precision": 100,
+   "medicine_match_acc_salt_strength_form": 100,
+   "medicine_match_acc_brand_exact": 100,
+   "ceiling_lookup_recall": 100,
+   "overcharge_lines": 9,
+   "overcharge_precision": 100,
+   "overcharge_recall": 88.88888888888889,
+   "tp": 8,
+   "fp": 0,
+   "fn": 1,
+   "bill_level_precision": 100,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 89.41176470588235,
+   "avg_ocr_ms": 855.125
+  },
+  {
+   "split": "dotmatrix",
+   "bills": 16,
+   "gt_lines": 96,
+   "line_extraction_recall": 97.91666666666667,
+   "line_extraction_precision": 97.91666666666667,
+   "medicine_match_acc_salt_strength_form": 96.80851063829788,
+   "medicine_match_acc_brand_exact": 95.74468085106383,
+   "ceiling_lookup_recall": 98.27586206896552,
+   "overcharge_lines": 18,
+   "overcharge_precision": 100,
+   "overcharge_recall": 94.44444444444444,
+   "tp": 17,
+   "fp": 0,
+   "fn": 1,
+   "bill_level_precision": 100,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 90.42553191489361,
+   "avg_ocr_ms": 959.6875
+  }
+ ],
+ "errors": [
+  {
+   "bill": "test-007",
+   "kind": "missed",
+   "want": "Leximan 500mg q=1 a=212.43"
+  },
+  {
+   "bill": "test-009",
+   "kind": "missed",
+   "want": "Itrosil 200mg q=1 a=66.67"
+  },
+  {
+   "bill": "test-009",
+   "kind": "missed-flag",
+   "name": "Itrosil 200mg",
+   "got": null
+  },
+  {
+   "bill": "test-014",
+   "kind": "match",
+   "ocr": "THYRONORM 56MCG TAB SUN",
+   "got": "Thyronorm 12.5mcg | levothyroxine 0.0125mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Apache RD 200mg/20mg q=1 a=222.33"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed-flag",
+   "name": "Apache RD 200mg/20mg",
+   "got": null
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Atocor 10 q=3 a=195.18"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Allegra 120mg q=3 a=422.67"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Storvas 10 q=2 a=132.26"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Amlopres 5 q=1 a=97.32"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed-flag",
+   "name": "Amlopres 5",
+   "got": null
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "PAN 40 q=1 a=151.91"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Telma 40 q=2 a=268"
+  },
+  {
+   "bill": "test-017",
+   "kind": "flag-on-unaligned",
+   "name": "PAN 40 Tab"
+  },
+  {
+   "bill": "test-019",
+   "kind": "match",
+   "ocr": "THYRONORM S@MCG TAB MKD",
+   "got": "Thyronorm 12.5mcg | levothyroxine 0.0125mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-023",
+   "kind": "missed-flag",
+   "name": "Glimozen 2mg",
+   "got": {
+    "flags": [],
+    "overcharge": 0,
+    "savings": 69.32000000000001,
+    "pack": 10,
+    "units": 10,
+    "perUnit": 7.5,
+    "basis": "unit",
+    "basisWhy": "column says unit price",
+    "gstRate": 0.05,
+    "gstAssumed": true,
+    "ceiling": {
+     "id": "22-344",
+     "list": "NLEM 2022",
+     "sl": 344,
+     "so": "S.O. 1575(E)",
+     "medicine": "Glimepiride",
+     "dosage": "Tablet 2mg",
+     "unitText": "1 Tablet",
+     "ceiling": 5.94,
+     "limit": 6.237000000000001
+    },
+    "generic": {
+     "code": 138,
+     "name": "Glimepiride Tablets IP 2mg",
+     "unitSize": "10's",
+     "mrp": 5.68,
+     "perUnit": 0.568,
+     "unitName": "unit",
+     "savePct": 92.42666666666668
+    },
+    "confidence": "low",
+    "status": "ok",
+    "ambiguousStrength": true
+   }
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Necflo 200mg q=10 a=175.5"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Rosera F 160mg/10mg q=20 a=428.8"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Emeset 4 q=10 a=36"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Cefakind 500 q=30 a=2415.9"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed-flag",
+   "name": "Cefakind 500",
+   "got": null
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Norban 400mg q=30 a=49.2"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Cardace 5 q=30 a=312.9"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed-flag",
+   "name": "Cardace 5",
+   "got": null
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Losar 50 q=30 a=55.2"
+  },
+  {
+   "bill": "test-025",
+   "kind": "flag-on-unaligned",
+   "name": "ony"
+  },
+  {
+   "bill": "test-029",
+   "kind": "missed",
+   "want": "Glycomet 500 SR q=1 a=307.98"
+  },
+  {
+   "bill": "test-029",
+   "kind": "match",
+   "ocr": "METSMALL 56@ TAB LUP",
+   "got": "Metsmall 1000 | metformin 1000mg",
+   "want": "Metsmall 500 | metformin 500mg"
+  },
+  {
+   "bill": "test-030",
+   "kind": "match",
+   "ocr": "CHgeey Es10/27",
+   "got": "Chest | paracetamol + phenylpropanolamine",
+   "want": "Moxikind-CV 625 | amoxicillin 500mg + clavulanic acid 125mg"
+  },
+  {
+   "bill": "test-032",
+   "kind": "match",
+   "ocr": "CPod 50mg Tab",
+   "got": "Cpod 200mg | cefpodoxime 200mg",
+   "want": "C Pod 50mg | cefpodoxime 50mg"
+  },
+  {
+   "bill": "test-035",
+   "kind": "missed",
+   "want": "Czpam 1mg q=30 a=90.3"
+  },
+  {
+   "bill": "test-035",
+   "kind": "match",
+   "ocr": "TAB 5",
+   "got": null,
+   "want": "Levoflox 500 | levofloxacin 500mg"
+  },
+  {
+   "bill": "test-035",
+   "kind": "match",
+   "ocr": "TAB 3",
+   "got": null,
+   "want": "Nexpro 40 | esomeprazole 40mg"
+  },
+  {
+   "bill": "test-035",
+   "kind": "match",
+   "ocr": "TAB SE",
+   "got": "Sedose | diazepam 5mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-041",
+   "kind": "match",
+   "ocr": "EMESET4TAB",
+   "got": "Emeset 2mg | ondansetron 2mg",
+   "want": "Emeset 4 | ondansetron 4mg"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Prazolam 0.25mg q=2 a=381.32"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Calpol 650mg q=2 a=54.88"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Taxim-O 200 q=3 a=159.45"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Ocid 20 q=3 a=153.12"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Nihifer-XT q=1 a=18.05"
+  },
+  {
+   "bill": "test-042",
+   "kind": "flag-on-unaligned",
+   "name": "Nihifer-XT Tab"
+  },
+  {
+   "bill": "test-057",
+   "kind": "match",
+   "ocr": "Allegra",
+   "got": "Allegra | fluticasone 0.0275mg",
+   "want": "Allegra 120mg | fexofenadine 120mg"
+  },
+  {
+   "bill": "test-057",
+   "kind": "match",
+   "ocr": "Met",
+   "got": "G Met | metronidazole 20mg/ml + ofloxacin 10mg/ml",
+   "want": "D Met 500mg | metformin 500mg"
+  },
+  {
+   "bill": "test-061",
+   "kind": "missed",
+   "want": "Amaryl 1mg q=2 a=225.96"
+  },
+  {
+   "bill": "test-061",
+   "kind": "flag-on-unaligned",
+   "name": "AMARYL 1MG TAB"
+  },
+  {
+   "bill": "test-065",
+   "kind": "match",
+   "ocr": "XADOMET VG",
+   "got": "Xadomet VG 2mg/500mg/0.2mg | glimepiride 2mg + metformin 500mg",
+   "want": "Xadomet VG 1mg/500mg/0.2mg | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-066",
+   "kind": "missed",
+   "want": "Cetzine q=3 a=106.26"
+  },
+  {
+   "bill": "test-066",
+   "kind": "missed-flag",
+   "name": "Cetzine",
+   "got": null
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Telmikind 40 q=1 a=81.04"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed-flag",
+   "name": "Telmikind 40",
+   "got": null
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Emeset 4 q=1 a=35.04"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "PAN 40 q=1 a=370.47"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed-flag",
+   "name": "PAN 40",
+   "got": null
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Cetcip q=1 a=17.15"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Belrab-DSR q=1 a=99.22"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Piclonac 100mg/500mg q=2 a=33.58"
+  },
+  {
+   "bill": "test-072",
+   "kind": "flag-on-unaligned",
+   "name": "Emeset 4 Tab"
+  },
+  {
+   "bill": "test-072",
+   "kind": "flag-on-unaligned",
+   "name": "Cetcip Tab"
+  },
+  {
+   "bill": "test-072",
+   "kind": "flag-on-unaligned",
+   "name": "Belrab-DSR Tab"
+  },
+  {
+   "bill": "test-076",
+   "kind": "false-flag",
+   "name": "Ocid 20",
+   "got": {
+    "flags": [
+     "over_mrp"
+    ],
+    "overcharge": 12,
+    "savings": 55.09999999999999,
+    "pack": 20,
+    "units": 40,
+    "perUnit": 2.3985,
+    "basis": "pack",
+    "basisWhy": "compared with printed MRP",
+    "gstRate": 0.05,
+    "gstAssumed": false,
+    "ceiling": {
+     "id": "22-548",
+     "list": "NLEM 2022",
+     "sl": 548,
+     "so": "S.O. 1575(E)",
+     "medicine": "Omeprazole",
+     "dosage": "Capsule 20 mg",
+     "unitText": "1 Capsule",
+     "ceiling": 2.94,
+     "limit": 3.087
+    },
+    "mrpCheck": {
+     "mrp": 41.97,
+     "perPack": 47.97,
+     "excess": 12
+    },
+    "generic": {
+     "code": 207,
+     "name": "Omeprazole Gastro-resistant Capsules IP 20 mg",
+     "unitSize": "10's",
+     "mrp": 10.21,
+     "perUnit": 1.0210000000000001,
+     "unitName": "unit",
+     "savePct": 57.431728163435466
+    },
+    "confidence": "high",
+    "status": "flag"
+   }
+  }
+ ]
+}

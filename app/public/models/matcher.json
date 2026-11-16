@@ -1,0 +1,41 @@
+{
+ "model": "linear scorer over matcher features, listwise softmax loss, logistic calibration",
+ "trained_on": "4190 queries (171444 candidate pairs) from train-split OCR output and simulated OCR noise",
+ "validation_top1": {
+  "model": 0.9296,
+  "fuzzy_brand_word_only": 0.9141,
+  "queries": 838
+ },
+ "date": "2026-11-16",
+ "features": [
+  "famSim",
+  "famExact",
+  "wordDice",
+  "labelNumsFound",
+  "queryNumsExplained",
+  "extraLabelWords",
+  "extraQueryWords",
+  "formAgree",
+  "formConflict",
+  "packAgree",
+  "packConflict",
+  "lenRatio",
+  "famPrefix"
+ ],
+ "weights": {
+  "bias": -1.2474116197963512,
+  "famSim": 1.1251051425933838,
+  "famExact": 0.7169538140296936,
+  "wordDice": 1.1454941034317017,
+  "labelNumsFound": 0.8160268664360046,
+  "queryNumsExplained": 0.6008628606796265,
+  "extraLabelWords": -0.4115430414676666,
+  "extraQueryWords": -0.6658549308776855,
+  "formAgree": 0.34821632504463196,
+  "formConflict": -0.49753671884536743,
+  "packAgree": 0.4439188241958618,
+  "packConflict": -0.19478321075439453,
+  "lenRatio": 0.5516376495361328,
+  "famPrefix": 0.23349125683307648
+ }
+}

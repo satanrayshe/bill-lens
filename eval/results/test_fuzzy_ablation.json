@@ -1,0 +1,1196 @@
+{
+ "results": [
+  {
+   "split": "all",
+   "bills": 80,
+   "gt_lines": 470,
+   "line_extraction_recall": 93.40425531914893,
+   "line_extraction_precision": 93.20594479830149,
+   "medicine_match_acc_salt_strength_form": 78.13211845102505,
+   "medicine_match_acc_brand_exact": 77.44874715261959,
+   "ceiling_lookup_recall": 86.45418326693228,
+   "overcharge_lines": 71,
+   "overcharge_precision": 87.14285714285714,
+   "overcharge_recall": 85.91549295774648,
+   "tp": 61,
+   "fp": 9,
+   "fn": 10,
+   "bill_level_precision": 95.55555555555556,
+   "bill_level_recall": 97.72727272727273,
+   "lines_with_generic_pct": 84.51025056947609,
+   "avg_ocr_ms": 1114.5625
+  },
+  {
+   "split": "thermal",
+   "bills": 16,
+   "gt_lines": 102,
+   "line_extraction_recall": 92.15686274509804,
+   "line_extraction_precision": 91.2621359223301,
+   "medicine_match_acc_salt_strength_form": 77.65957446808511,
+   "medicine_match_acc_brand_exact": 77.65957446808511,
+   "ceiling_lookup_recall": 85.71428571428571,
+   "overcharge_lines": 6,
+   "overcharge_precision": 80,
+   "overcharge_recall": 66.66666666666667,
+   "tp": 4,
+   "fp": 1,
+   "fn": 2,
+   "bill_level_precision": 100,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 79.7872340425532,
+   "avg_ocr_ms": 1669.1875
+  },
+  {
+   "split": "gst",
+   "bills": 16,
+   "gt_lines": 92,
+   "line_extraction_recall": 97.82608695652173,
+   "line_extraction_precision": 97.82608695652173,
+   "medicine_match_acc_salt_strength_form": 77.77777777777777,
+   "medicine_match_acc_brand_exact": 76.66666666666667,
+   "ceiling_lookup_recall": 88.46153846153847,
+   "overcharge_lines": 20,
+   "overcharge_precision": 90.47619047619048,
+   "overcharge_recall": 95,
+   "tp": 19,
+   "fp": 2,
+   "fn": 1,
+   "bill_level_precision": 92.3076923076923,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 86.66666666666667,
+   "avg_ocr_ms": 1101.9375
+  },
+  {
+   "split": "chemist",
+   "bills": 16,
+   "gt_lines": 95,
+   "line_extraction_recall": 80,
+   "line_extraction_precision": 80,
+   "medicine_match_acc_salt_strength_form": 69.73684210526316,
+   "medicine_match_acc_brand_exact": 68.42105263157895,
+   "ceiling_lookup_recall": 72.09302325581395,
+   "overcharge_lines": 18,
+   "overcharge_precision": 70,
+   "overcharge_recall": 77.77777777777777,
+   "tp": 14,
+   "fp": 6,
+   "fn": 4,
+   "bill_level_precision": 90.9090909090909,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 85.52631578947368,
+   "avg_ocr_ms": 986.875
+  },
+  {
+   "split": "hospital",
+   "bills": 16,
+   "gt_lines": 85,
+   "line_extraction_recall": 100,
+   "line_extraction_precision": 100,
+   "medicine_match_acc_salt_strength_form": 82.3529411764706,
+   "medicine_match_acc_brand_exact": 81.17647058823529,
+   "ceiling_lookup_recall": 90.47619047619048,
+   "overcharge_lines": 9,
+   "overcharge_precision": 100,
+   "overcharge_recall": 77.77777777777777,
+   "tp": 7,
+   "fp": 0,
+   "fn": 2,
+   "bill_level_precision": 100,
+   "bill_level_recall": 85.71428571428571,
+   "lines_with_generic_pct": 84.70588235294117,
+   "avg_ocr_ms": 855.125
+  },
+  {
+   "split": "dotmatrix",
+   "bills": 16,
+   "gt_lines": 96,
+   "line_extraction_recall": 97.91666666666667,
+   "line_extraction_precision": 97.91666666666667,
+   "medicine_match_acc_salt_strength_form": 81.91489361702128,
+   "medicine_match_acc_brand_exact": 81.91489361702128,
+   "ceiling_lookup_recall": 93.10344827586206,
+   "overcharge_lines": 18,
+   "overcharge_precision": 100,
+   "overcharge_recall": 94.44444444444444,
+   "tp": 17,
+   "fp": 0,
+   "fn": 1,
+   "bill_level_precision": 100,
+   "bill_level_recall": 100,
+   "lines_with_generic_pct": 86.17021276595744,
+   "avg_ocr_ms": 959.6875
+  }
+ ],
+ "errors": [
+  {
+   "bill": "test-000",
+   "kind": "match",
+   "ocr": "DEPOUT 5MG TAB",
+   "got": "Depout | amitriptyline",
+   "want": "Depout 5mg | amitriptyline 5mg"
+  },
+  {
+   "bill": "test-000",
+   "kind": "match",
+   "ocr": "ETOFREE 200MG TAB",
+   "got": "Etofree 300mg | etodolac 300mg",
+   "want": "Etofree 200mg | etodolac 200mg"
+  },
+  {
+   "bill": "test-000",
+   "kind": "match",
+   "ocr": "LOYZIDE M 40MG/500MG",
+   "got": "Loyzide M 60mg/500mg | gliclazide 60mg + metformin 500mg",
+   "want": "Loyzide M 40mg/500mg | gliclazide 40mg + metformin 500mg"
+  },
+  {
+   "bill": "test-001",
+   "kind": "match",
+   "ocr": "RIZE 1MG TAB",
+   "got": "Rize 4mg | risperidone 4mg",
+   "want": "Rize 1mg | risperidone 1mg"
+  },
+  {
+   "bill": "test-002",
+   "kind": "match",
+   "ocr": "MASDIL BD 240MG Tab",
+   "got": "MASDIL BD 120MG | diltiazem 120mg",
+   "want": "MASDIL BD 240MG | diltiazem 240mg"
+  },
+  {
+   "bill": "test-002",
+   "kind": "match",
+   "ocr": "Asthalin 4 Tab",
+   "got": "Asthalin | salbutamol 0.4mg/ml",
+   "want": "Asthalin 4 | salbutamol 4mg"
+  },
+  {
+   "bill": "test-002",
+   "kind": "match",
+   "ocr": "Telsartan-AM 80 Tab",
+   "got": "Telsartan-AM | amlodipine 5mg + telmisartan 40mg",
+   "want": "Telsartan-AM 80 | amlodipine 5mg + telmisartan 80mg"
+  },
+  {
+   "bill": "test-005",
+   "kind": "match",
+   "ocr": "RAXFLAME 500 TAB",
+   "got": "Raxflame 250mg | paracetamol 250mg",
+   "want": "Raxflame 500 | paracetamol 500mg"
+  },
+  {
+   "bill": "test-005",
+   "kind": "match",
+   "ocr": "ASTHALIN 4 TAB",
+   "got": "Asthalin | salbutamol 0.4mg/ml",
+   "want": "Asthalin 4 | salbutamol 4mg"
+  },
+  {
+   "bill": "test-006",
+   "kind": "match",
+   "ocr": "CALPOL 650MG TAB",
+   "got": "Calpol 500mg | paracetamol 500mg",
+   "want": "Calpol 650mg | paracetamol 650mg"
+  },
+  {
+   "bill": "test-006",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-007",
+   "kind": "missed",
+   "want": "Leximan 500mg q=1 a=212.43"
+  },
+  {
+   "bill": "test-007",
+   "kind": "match",
+   "ocr": "Romilast L 2.5 mg/4 mg Tab",
+   "got": "Romilast L 10 | levocetirizine 5mg + montelukast 10mg",
+   "want": "Romilast L 2.5 mg/4 mg | levocetirizine 2.5mg + montelukast 4mg"
+  },
+  {
+   "bill": "test-008",
+   "kind": "match",
+   "ocr": "ATOCOR 10 TAB",
+   "got": "Atocor 40 | atorvastatin 40mg",
+   "want": "Atocor 10 | atorvastatin 10mg"
+  },
+  {
+   "bill": "test-009",
+   "kind": "missed",
+   "want": "Itrosil 200mg q=1 a=66.67"
+  },
+  {
+   "bill": "test-009",
+   "kind": "missed-flag",
+   "name": "Itrosil 200mg",
+   "got": null
+  },
+  {
+   "bill": "test-010",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-011",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-012",
+   "kind": "match",
+   "ocr": "Gemer 1 Tab",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-012",
+   "kind": "match",
+   "ocr": "Etrident 60mg Tab",
+   "got": "Etrident 90mg | etoricoxib 90mg",
+   "want": "Etrident 60mg | etoricoxib 60mg"
+  },
+  {
+   "bill": "test-013",
+   "kind": "match",
+   "ocr": "ASTHALIN 4 TAB",
+   "got": "Asthalin | salbutamol 0.4mg/ml",
+   "want": "Asthalin 4 | salbutamol 4mg"
+  },
+  {
+   "bill": "test-014",
+   "kind": "match",
+   "ocr": "OFLOREN 0Z TAB MKD",
+   "got": "Ofloren 200mg | ofloxacin 200mg",
+   "want": "Ofloren OZ | ofloxacin 200mg + ornidazole 500mg"
+  },
+  {
+   "bill": "test-014",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB GSK",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-014",
+   "kind": "match",
+   "ocr": "THYRONORM 56MCG TAB SUN",
+   "got": "Thyronorm 25mcg | levothyroxine 0.025mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-016",
+   "kind": "match",
+   "ocr": "THYRONORM 50MCG TAB",
+   "got": "Thyronorm 25mcg | levothyroxine 0.025mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-016",
+   "kind": "match",
+   "ocr": "ONDOCOS 8MG TAB",
+   "got": "Ondocos 4mg | ondansetron 4mg",
+   "want": "Ondocos 8mg | ondansetron 8mg"
+  },
+  {
+   "bill": "test-016",
+   "kind": "match",
+   "ocr": "SULPISOL 200 TAB",
+   "got": "Sulpisol 100 | amisulpride 100mg",
+   "want": "Sulpisol 200 | amisulpride 200mg"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Apache RD 200mg/20mg q=1 a=222.33"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed-flag",
+   "name": "Apache RD 200mg/20mg",
+   "got": null
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Atocor 10 q=3 a=195.18"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Allegra 120mg q=3 a=422.67"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Storvas 10 q=2 a=132.26"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Amlopres 5 q=1 a=97.32"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed-flag",
+   "name": "Amlopres 5",
+   "got": null
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "PAN 40 q=1 a=151.91"
+  },
+  {
+   "bill": "test-017",
+   "kind": "missed",
+   "want": "Telma 40 q=2 a=268"
+  },
+  {
+   "bill": "test-017",
+   "kind": "flag-on-unaligned",
+   "name": "PAN 40 Tab"
+  },
+  {
+   "bill": "test-018",
+   "kind": "match",
+   "ocr": "VOTE TD 8MG TAB",
+   "got": "Vote TD 24mg | betahistine 24mg",
+   "want": "Vote TD 8mg | betahistine 8mg"
+  },
+  {
+   "bill": "test-019",
+   "kind": "match",
+   "ocr": "THYRONORM S@MCG TAB MKD",
+   "got": "Thyronorm 25mcg | levothyroxine 0.025mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-019",
+   "kind": "match",
+   "ocr": "AMARYL 1MG TAB MKD",
+   "got": "Amaryl M  1mg | glimepiride 1mg + metformin 500mg",
+   "want": "Amaryl 1mg | glimepiride 1mg"
+  },
+  {
+   "bill": "test-020",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-021",
+   "kind": "match",
+   "ocr": "CIPLOX 500 TAB",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-023",
+   "kind": "match",
+   "ocr": "CIPLOX 500 TAB",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-023",
+   "kind": "match",
+   "ocr": "SOLIACT 10 TAB",
+   "got": "Soliact 5 | solifenacin 5mg",
+   "want": "Soliact 10 | solifenacin 10mg"
+  },
+  {
+   "bill": "test-023",
+   "kind": "match",
+   "ocr": "GLIMOZEN 2MG TAB",
+   "got": "Glimozen 1mg/500mg | glimepiride 1mg + metformin 500mg",
+   "want": "Glimozen 2mg | glimepiride 2mg"
+  },
+  {
+   "bill": "test-023",
+   "kind": "missed-flag",
+   "name": "Glimozen 2mg",
+   "got": {
+    "flags": [],
+    "overcharge": 0,
+    "savings": 56.85000000000001,
+    "pack": 10,
+    "units": 10,
+    "perUnit": 7.5,
+    "basis": "unit",
+    "basisWhy": "column says unit price",
+    "gstRate": 0.05,
+    "gstAssumed": true,
+    "generic": {
+     "code": 904,
+     "name": "Metformin Hydrochloride 500mg (Prolonged release) and Glimepiride 1mg Tablets IP",
+     "unitSize": "10's",
+     "mrp": 18.15,
+     "perUnit": 1.815,
+     "unitName": "unit",
+     "savePct": 75.80000000000001
+    },
+    "confidence": "high",
+    "status": "ok"
+   }
+  },
+  {
+   "bill": "test-024",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB TOR",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Necflo 200mg q=10 a=175.5"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Rosera F 160mg/10mg q=20 a=428.8"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Emeset 4 q=10 a=36"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Cefakind 500 q=30 a=2415.9"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed-flag",
+   "name": "Cefakind 500",
+   "got": null
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Norban 400mg q=30 a=49.2"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Cardace 5 q=30 a=312.9"
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed-flag",
+   "name": "Cardace 5",
+   "got": null
+  },
+  {
+   "bill": "test-025",
+   "kind": "missed",
+   "want": "Losar 50 q=30 a=55.2"
+  },
+  {
+   "bill": "test-025",
+   "kind": "flag-on-unaligned",
+   "name": "ony"
+  },
+  {
+   "bill": "test-027",
+   "kind": "match",
+   "ocr": "Gblin 75mg Tab",
+   "got": "Gblin 150mg | pregabalin 150mg",
+   "want": "Gblin 75mg | pregabalin 75mg"
+  },
+  {
+   "bill": "test-027",
+   "kind": "match",
+   "ocr": "Vepoxid 10mg Tab",
+   "got": "Vepoxid 25mg | chlordiazepoxide 25mg",
+   "want": "Vepoxid 10mg | chlordiazepoxide 10mg"
+  },
+  {
+   "bill": "test-027",
+   "kind": "match",
+   "ocr": "Soltrol 100mg Cap",
+   "got": "Soltrol 200mg | itraconazole 200mg",
+   "want": "Soltrol 100mg | itraconazole 100mg"
+  },
+  {
+   "bill": "test-028",
+   "kind": "match",
+   "ocr": "CYMEX 500MG TAB",
+   "got": "Cymex | cyproheptadine 0.4mg/ml + tricholine 55mg/ml",
+   "want": "Cymex 500mg | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-029",
+   "kind": "match",
+   "ocr": "SWITDAPA 10 TAB MAN",
+   "got": "Switdapa M 10mg/1000mg | dapagliflozin 10mg + metformin 1000mg",
+   "want": "Switdapa 10 | dapagliflozin 10mg"
+  },
+  {
+   "bill": "test-029",
+   "kind": "missed",
+   "want": "Glycomet 500 SR q=1 a=307.98"
+  },
+  {
+   "bill": "test-030",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-030",
+   "kind": "match",
+   "ocr": "CHgeey Es10/27",
+   "got": null,
+   "want": "Moxikind-CV 625 | amoxicillin 500mg + clavulanic acid 125mg"
+  },
+  {
+   "bill": "test-031",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-031",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-032",
+   "kind": "match",
+   "ocr": "CPod 50mg Tab",
+   "got": "Cpod 200mg | cefpodoxime 200mg",
+   "want": "C Pod 50mg | cefpodoxime 50mg"
+  },
+  {
+   "bill": "test-032",
+   "kind": "match",
+   "ocr": "Cledomox 250 mg/125 mg Tab",
+   "got": "Cledomox 500 mg/125 mg | amoxicillin 500mg + clavulanic acid 125mg",
+   "want": "Cledomox 250 mg/125 mg | amoxicillin 250mg + clavulanic acid 125mg"
+  },
+  {
+   "bill": "test-033",
+   "kind": "match",
+   "ocr": "AZESIN 250 TAB",
+   "got": "Azesin | azithromycin 40mg/ml",
+   "want": "Azesin 250 | azithromycin 250mg"
+  },
+  {
+   "bill": "test-035",
+   "kind": "missed",
+   "want": "Czpam 1mg q=30 a=90.3"
+  },
+  {
+   "bill": "test-035",
+   "kind": "match",
+   "ocr": "TAB 5",
+   "got": null,
+   "want": "Levoflox 500 | levofloxacin 500mg"
+  },
+  {
+   "bill": "test-035",
+   "kind": "match",
+   "ocr": "TAB 3",
+   "got": null,
+   "want": "Nexpro 40 | esomeprazole 40mg"
+  },
+  {
+   "bill": "test-035",
+   "kind": "match",
+   "ocr": "TAB SE",
+   "got": "Set 5mg | levocetirizine 5mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-036",
+   "kind": "match",
+   "ocr": "CIPLOX 500 TAB",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-037",
+   "kind": "match",
+   "ocr": "Ceftol 100mg Tab",
+   "got": "Ceftol 200mg | cefixime 200mg",
+   "want": "Ceftol 100mg | cefixime 100mg"
+  },
+  {
+   "bill": "test-038",
+   "kind": "match",
+   "ocr": "ATOCOR 10 TAB",
+   "got": "Atocor 40 | atorvastatin 40mg",
+   "want": "Atocor 10 | atorvastatin 10mg"
+  },
+  {
+   "bill": "test-038",
+   "kind": "missed-flag",
+   "name": "Atocor 10",
+   "got": {
+    "flags": [],
+    "overcharge": 0,
+    "savings": 258.34499999999997,
+    "pack": 15,
+    "units": 45,
+    "perUnit": 8.01,
+    "basis": "unit",
+    "basisWhy": "column says unit price",
+    "gstRate": 0.05,
+    "gstAssumed": true,
+    "ceiling": {
+     "id": "22-72",
+     "list": "NLEM 2022",
+     "sl": 72,
+     "so": "S.O. 1575(E)",
+     "medicine": "Atorvastatin",
+     "dosage": "Tablet 40mg",
+     "unitText": "1 Tablet",
+     "ceiling": 19.77,
+     "limit": 20.7585
+    },
+    "generic": {
+     "code": 456,
+     "name": "Atorvastatin Tablets IP 40 mg",
+     "unitSize": "10's",
+     "mrp": 22.69,
+     "perUnit": 2.269,
+     "unitName": "unit",
+     "savePct": 71.6729088639201
+    },
+    "confidence": "high",
+    "status": "ok"
+   }
+  },
+  {
+   "bill": "test-039",
+   "kind": "match",
+   "ocr": "THYRONORM 50MCG TAB MAN",
+   "got": "Thyronorm 25mcg | levothyroxine 0.025mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-040",
+   "kind": "match",
+   "ocr": "SERTAPOX 50MG TAB",
+   "got": "Sertapox 100mg | sertraline 100mg",
+   "want": "Sertapox 50mg | sertraline 50mg"
+  },
+  {
+   "bill": "test-041",
+   "kind": "match",
+   "ocr": "EMESET4TAB",
+   "got": null,
+   "want": "Emeset 4 | ondansetron 4mg"
+  },
+  {
+   "bill": "test-041",
+   "kind": "match",
+   "ocr": "THYRONORM 50MCG TAB",
+   "got": "Thyronorm 25mcg | levothyroxine 0.025mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-041",
+   "kind": "match",
+   "ocr": "TYDOL 75MG TAB",
+   "got": "Tydol 50 | tapentadol 50mg",
+   "want": "Tydol 75mg | tapentadol 75mg"
+  },
+  {
+   "bill": "test-041",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-041",
+   "kind": "match",
+   "ocr": "CIPLOX 500 TAB",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Prazolam 0.25mg q=2 a=381.32"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Calpol 650mg q=2 a=54.88"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Taxim-O 200 q=3 a=159.45"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Ocid 20 q=3 a=153.12"
+  },
+  {
+   "bill": "test-042",
+   "kind": "missed",
+   "want": "Nihifer-XT q=1 a=18.05"
+  },
+  {
+   "bill": "test-042",
+   "kind": "flag-on-unaligned",
+   "name": "Nihifer-XT Tab"
+  },
+  {
+   "bill": "test-043",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-044",
+   "kind": "match",
+   "ocr": "ATOCOR 10 TAB SUN",
+   "got": "Atocor 40 | atorvastatin 40mg",
+   "want": "Atocor 10 | atorvastatin 10mg"
+  },
+  {
+   "bill": "test-047",
+   "kind": "match",
+   "ocr": "Calpol 650mg Tab",
+   "got": "Calpol 500mg | paracetamol 500mg",
+   "want": "Calpol 650mg | paracetamol 650mg"
+  },
+  {
+   "bill": "test-047",
+   "kind": "match",
+   "ocr": "Lifecif 100mg Tab",
+   "got": "Lifecif | cefixime 50mg",
+   "want": "Lifecif 100mg | cefixime 100mg"
+  },
+  {
+   "bill": "test-047",
+   "kind": "match",
+   "ocr": "Atrow 20 Tab",
+   "got": "Atrow 10 | atorvastatin 10mg",
+   "want": "Atrow 20 | atorvastatin 20mg"
+  },
+  {
+   "bill": "test-047",
+   "kind": "match",
+   "ocr": "Torlen 10mg Tab",
+   "got": "Torlen 20mg | torasemide 20mg",
+   "want": "Torlen 10mg | torasemide 10mg"
+  },
+  {
+   "bill": "test-048",
+   "kind": "match",
+   "ocr": "CIPLOX 500 TAB",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-048",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-049",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB GSK",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-050",
+   "kind": "match",
+   "ocr": "NUVOGLI TRIO 1MG TAB",
+   "got": "Nuvogli Trio 2mg | glimepiride 2mg + metformin 500mg",
+   "want": "Nuvogli Trio 1mg | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-052",
+   "kind": "match",
+   "ocr": "Afexdine 18omg Tab",
+   "got": "Afexdine 120mg | fexofenadine 120mg",
+   "want": "Afexdine 180mg | fexofenadine 180mg"
+  },
+  {
+   "bill": "test-054",
+   "kind": "match",
+   "ocr": "AZITOUGH 250MG TAB ZYD",
+   "got": "Azitough 500mg | azithromycin 500mg",
+   "want": "Azitough 250mg | azithromycin 250mg"
+  },
+  {
+   "bill": "test-055",
+   "kind": "match",
+   "ocr": "GABTAS 400MG CAP",
+   "got": "Gabtas 100mg | gabapentin 100mg",
+   "want": "Gabtas 400mg | gabapentin 400mg"
+  },
+  {
+   "bill": "test-055",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-055",
+   "kind": "match",
+   "ocr": "CARDACE 5 TAB",
+   "got": "Cardace 2.5 | ramipril 2.5mg",
+   "want": "Cardace 5 | ramipril 5mg"
+  },
+  {
+   "bill": "test-057",
+   "kind": "false-flag",
+   "name": "D Met 500mg",
+   "got": {
+    "flags": [
+     "over_ceiling"
+    ],
+    "overcharge": 148.86499999999998,
+    "savings": 163.78999999999996,
+    "pack": 10,
+    "units": 10,
+    "perUnit": 17.06,
+    "basis": "pack",
+    "basisWhy": "compared with printed MRP",
+    "gstRate": 0.05,
+    "gstAssumed": true,
+    "ceiling": {
+     "id": "22-489",
+     "list": "NLEM 2022",
+     "sl": 489,
+     "so": "S.O. 1575(E)",
+     "medicine": "Metformin",
+     "dosage": "Tablet 500mg",
+     "unitText": "1 Tablet",
+     "ceiling": 2.07,
+     "limit": 2.1734999999999998,
+     "excess": 148.86499999999998
+    },
+    "mrpCheck": {
+     "mrp": 170.6,
+     "perPack": 170.6
+    },
+    "generic": {
+     "code": 145,
+     "name": "Metformin Hydrochloride Tablets IP 500mg",
+     "unitSize": "10's",
+     "mrp": 6.81,
+     "perUnit": 0.6809999999999999,
+     "unitName": "unit",
+     "savePct": 96.00820633059787
+    },
+    "confidence": "low",
+    "status": "flag",
+    "ambiguousStrength": true
+   }
+  },
+  {
+   "bill": "test-058",
+   "kind": "match",
+   "ocr": "TRIOCEF 100MG TAB",
+   "got": "Triocef 200mg | cefixime 200mg",
+   "want": "Triocef 100mg | cefixime 100mg"
+  },
+  {
+   "bill": "test-060",
+   "kind": "match",
+   "ocr": "DUO TAB",
+   "got": "Duo 2 | brimonidine 0.2% + brinzolamide 1%",
+   "want": "Augmentin 625 Duo | amoxicillin 500mg + clavulanic acid 125mg"
+  },
+  {
+   "bill": "test-061",
+   "kind": "missed",
+   "want": "Amaryl 1mg q=2 a=225.96"
+  },
+  {
+   "bill": "test-061",
+   "kind": "flag-on-unaligned",
+   "name": "AMARYL 1MG TAB"
+  },
+  {
+   "bill": "test-062",
+   "kind": "match",
+   "ocr": "Dayo OD 750 Tab",
+   "got": "Dayo  OD 500 | valproate 500mg",
+   "want": "Dayo  OD 750 | valproate 750mg"
+  },
+  {
+   "bill": "test-063",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-063",
+   "kind": "match",
+   "ocr": "VESIFA 10MG TAB",
+   "got": "Vesifa 5mg | solifenacin 5mg",
+   "want": "Vesifa 10mg | solifenacin 10mg"
+  },
+  {
+   "bill": "test-064",
+   "kind": "match",
+   "ocr": "CIPLOX See TAB MKD",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-064",
+   "kind": "match",
+   "ocr": "IBUGESIC 400 TAB MAN",
+   "got": "Ibugesic M 400mg/750mg | ibuprofen 400mg + methocarbamol 750mg",
+   "want": "Ibugesic 400 | ibuprofen 400mg"
+  },
+  {
+   "bill": "test-065",
+   "kind": "match",
+   "ocr": "GEMER 1 TAB",
+   "got": "Gemer 2 | glimepiride 2mg + metformin 500mg",
+   "want": "Gemer 1 | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-065",
+   "kind": "match",
+   "ocr": "XADOMET VG",
+   "got": "Xadomet VG 2mg/500mg/0.2mg | glimepiride 2mg + metformin 500mg",
+   "want": "Xadomet VG 1mg/500mg/0.2mg | glimepiride 1mg + metformin 500mg"
+  },
+  {
+   "bill": "test-066",
+   "kind": "missed",
+   "want": "Cetzine q=3 a=106.26"
+  },
+  {
+   "bill": "test-066",
+   "kind": "missed-flag",
+   "name": "Cetzine",
+   "got": null
+  },
+  {
+   "bill": "test-067",
+   "kind": "match",
+   "ocr": "Rifafrnd 550mg Tab",
+   "got": "Rifafrnd 400mg | rifaximin 400mg",
+   "want": "Rifafrnd 550mg | rifaximin 550mg"
+  },
+  {
+   "bill": "test-067",
+   "kind": "match",
+   "ocr": "Ciplox 500 Tab",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-071",
+   "kind": "match",
+   "ocr": "ASTHALIN 4 TAB",
+   "got": "Asthalin | salbutamol 0.4mg/ml",
+   "want": "Asthalin 4 | salbutamol 4mg"
+  },
+  {
+   "bill": "test-071",
+   "kind": "match",
+   "ocr": "UBER 100 TAB",
+   "got": "Uber 250mg | azithromycin 250mg",
+   "want": "Uber 100 | azithromycin 100mg"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Telmikind 40 q=1 a=81.04"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed-flag",
+   "name": "Telmikind 40",
+   "got": null
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Emeset 4 q=1 a=35.04"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "PAN 40 q=1 a=370.47"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed-flag",
+   "name": "PAN 40",
+   "got": null
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Cetcip q=1 a=17.15"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Belrab-DSR q=1 a=99.22"
+  },
+  {
+   "bill": "test-072",
+   "kind": "missed",
+   "want": "Piclonac 100mg/500mg q=2 a=33.58"
+  },
+  {
+   "bill": "test-072",
+   "kind": "flag-on-unaligned",
+   "name": "Emeset 4 Tab"
+  },
+  {
+   "bill": "test-072",
+   "kind": "flag-on-unaligned",
+   "name": "Cetcip Tab"
+  },
+  {
+   "bill": "test-072",
+   "kind": "flag-on-unaligned",
+   "name": "Belrab-DSR Tab"
+  },
+  {
+   "bill": "test-074",
+   "kind": "match",
+   "ocr": "ATOCOR 10 TAB GSK",
+   "got": "Atocor 40 | atorvastatin 40mg",
+   "want": "Atocor 10 | atorvastatin 10mg"
+  },
+  {
+   "bill": "test-075",
+   "kind": "match",
+   "ocr": "FIXIMAX 100MG TAB",
+   "got": "Fiximax 200mg | cefixime 200mg",
+   "want": "Fiximax 100mg | cefixime 100mg"
+  },
+  {
+   "bill": "test-076",
+   "kind": "match",
+   "ocr": "ETIZORIX 0.25MG TAB",
+   "got": "Etizorix 0.5mg | etizolam 0.5mg",
+   "want": "Etizorix 0.25mg | etizolam 0.25mg"
+  },
+  {
+   "bill": "test-076",
+   "kind": "false-flag",
+   "name": "Ocid 20",
+   "got": {
+    "flags": [
+     "over_mrp"
+    ],
+    "overcharge": 12,
+    "savings": 55.09999999999999,
+    "pack": 20,
+    "units": 40,
+    "perUnit": 2.3985,
+    "basis": "pack",
+    "basisWhy": "compared with printed MRP",
+    "gstRate": 0.05,
+    "gstAssumed": false,
+    "ceiling": {
+     "id": "22-548",
+     "list": "NLEM 2022",
+     "sl": 548,
+     "so": "S.O. 1575(E)",
+     "medicine": "Omeprazole",
+     "dosage": "Capsule 20 mg",
+     "unitText": "1 Capsule",
+     "ceiling": 2.94,
+     "limit": 3.087
+    },
+    "mrpCheck": {
+     "mrp": 41.97,
+     "perPack": 47.97,
+     "excess": 12
+    },
+    "generic": {
+     "code": 207,
+     "name": "Omeprazole Gastro-resistant Capsules IP 20 mg",
+     "unitSize": "10's",
+     "mrp": 10.21,
+     "perUnit": 1.0210000000000001,
+     "unitName": "unit",
+     "savePct": 57.431728163435466
+    },
+    "confidence": "high",
+    "status": "flag"
+   }
+  },
+  {
+   "bill": "test-076",
+   "kind": "match",
+   "ocr": "DOTTRIP 25MG TAB",
+   "got": "Dottrip 10mg | amitriptyline 10mg",
+   "want": "Dottrip 25mg | amitriptyline 25mg"
+  },
+  {
+   "bill": "test-077",
+   "kind": "match",
+   "ocr": "Atocor 10 Tab",
+   "got": "Atocor 40 | atorvastatin 40mg",
+   "want": "Atocor 10 | atorvastatin 10mg"
+  },
+  {
+   "bill": "test-077",
+   "kind": "match",
+   "ocr": "MD Sone 16mg Tab",
+   "got": "MD Sone 40mg | methylprednisolone 40mg",
+   "want": "MD Sone 16mg | methylprednisolone 16mg"
+  },
+  {
+   "bill": "test-077",
+   "kind": "match",
+   "ocr": "Ciplox 500 Tab",
+   "got": "Ciplox | ciprofloxacin 0.3%",
+   "want": "Ciplox 500 | ciprofloxacin 500mg"
+  },
+  {
+   "bill": "test-079",
+   "kind": "match",
+   "ocr": "CABOTIB 60 TAB GSK",
+   "got": "Cabotib 40 | cabozantinib 40mg",
+   "want": "Cabotib 60 | cabozantinib 60mg"
+  },
+  {
+   "bill": "test-079",
+   "kind": "match",
+   "ocr": "THYRONORM 50MCG TAB MAN",
+   "got": "Thyronorm 25mcg | levothyroxine 0.025mg",
+   "want": "Thyronorm 50mcg | levothyroxine 0.05mg"
+  },
+  {
+   "bill": "test-079",
+   "kind": "match",
+   "ocr": "METSMALL 500 TAB GLN",
+   "got": "Metsmall G 1mg/500mg | glimepiride 1mg + metformin 500mg",
+   "want": "Metsmall 500 | metformin 500mg"
+  }
+ ]
+}
